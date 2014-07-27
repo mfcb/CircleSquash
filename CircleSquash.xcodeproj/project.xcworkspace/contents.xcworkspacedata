@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PongOverride.xcodeproj">
+      location = "self:CircleSquash.xcodeproj">
    </FileRef>
 </Workspace>

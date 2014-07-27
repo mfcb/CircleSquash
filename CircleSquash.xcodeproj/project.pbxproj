@@ -14,6 +14,28 @@
 		240CF13119851C6F00B19319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240CF12F19851C6F00B19319 /* Main.storyboard */; };
 		240CF13319851C6F00B19319 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 240CF13219851C6F00B19319 /* Images.xcassets */; };
 		240CF13F19851C6F00B19319 /* PongOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240CF13E19851C6F00B19319 /* PongOverrideTests.swift */; };
+		240CF14919851CC700B19319 /* SSDPongBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240CF14819851CC700B19319 /* SSDPongBall.swift */; };
+		240CF14B19851CE000B19319 /* SSDMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240CF14A19851CE000B19319 /* SSDMath.swift */; };
+		240CF14D19851CFF00B19319 /* SSDPongMenus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240CF14C19851CFF00B19319 /* SSDPongMenus.swift */; };
+		240CF14F19851D2100B19319 /* SSDMultilineLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240CF14E19851D2100B19319 /* SSDMultilineLabelNode.swift */; };
+		240CF15119851D3400B19319 /* SSDGameSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240CF15019851D3400B19319 /* SSDGameSimulation.swift */; };
+		240CF15319851D4800B19319 /* SSDGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240CF15219851D4800B19319 /* SSDGlobals.swift */; };
+		240CF16319851D6200B19319 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF15419851D6200B19319 /* AppIcon29x29.png */; };
+		240CF16419851D6200B19319 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF15519851D6200B19319 /* AppIcon29x29@2x.png */; };
+		240CF16519851D6200B19319 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF15619851D6200B19319 /* AppIcon40x40.png */; };
+		240CF16619851D6200B19319 /* AppIcon40x40@2x-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF15719851D6200B19319 /* AppIcon40x40@2x-1.png */; };
+		240CF16719851D6200B19319 /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF15819851D6200B19319 /* AppIcon40x40@2x.png */; };
+		240CF16819851D6200B19319 /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF15919851D6200B19319 /* AppIcon60x60@2x.png */; };
+		240CF16919851D6200B19319 /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF15A19851D6200B19319 /* AppIcon76x76.png */; };
+		240CF16A19851D6200B19319 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF15B19851D6200B19319 /* AppIcon76x76@2x.png */; };
+		240CF16B19851D6200B19319 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF15C19851D6200B19319 /* ball.png */; };
+		240CF16C19851D6200B19319 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF15D19851D6200B19319 /* Circle.png */; };
+		240CF16D19851D6200B19319 /* launch-image-iphone4.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF15E19851D6200B19319 /* launch-image-iphone4.png */; };
+		240CF16E19851D6200B19319 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF15F19851D6200B19319 /* logo.png */; };
+		240CF16F19851D6200B19319 /* paddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF16019851D6200B19319 /* paddle.png */; };
+		240CF17019851D6200B19319 /* pause_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF16119851D6200B19319 /* pause_button.png */; };
+		240CF17119851D6200B19319 /* scroll_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 240CF16219851D6200B19319 /* scroll_arrow.png */; };
+		240CF17319851DC300B19319 /* impact.wav in Resources */ = {isa = PBXBuildFile; fileRef = 240CF17219851DC300B19319 /* impact.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		240CF12219851C6F00B19319 /* PongOverride.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PongOverride.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		240CF12219851C6F00B19319 /* CircleSquash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleSquash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		240CF12619851C6F00B19319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		240CF12719851C6F00B19319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		240CF12919851C6F00B19319 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -35,9 +57,31 @@
 		240CF12D19851C6F00B19319 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		240CF13019851C6F00B19319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		240CF13219851C6F00B19319 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		240CF13819851C6F00B19319 /* PongOverrideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PongOverrideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		240CF13819851C6F00B19319 /* CircleSquashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleSquashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		240CF13D19851C6F00B19319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		240CF13E19851C6F00B19319 /* PongOverrideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongOverrideTests.swift; sourceTree = "<group>"; };
+		240CF14819851CC700B19319 /* SSDPongBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPongBall.swift; sourceTree = "<group>"; };
+		240CF14A19851CE000B19319 /* SSDMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDMath.swift; sourceTree = "<group>"; };
+		240CF14C19851CFF00B19319 /* SSDPongMenus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDPongMenus.swift; sourceTree = "<group>"; };
+		240CF14E19851D2100B19319 /* SSDMultilineLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDMultilineLabelNode.swift; sourceTree = "<group>"; };
+		240CF15019851D3400B19319 /* SSDGameSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDGameSimulation.swift; sourceTree = "<group>"; };
+		240CF15219851D4800B19319 /* SSDGlobals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDGlobals.swift; sourceTree = "<group>"; };
+		240CF15419851D6200B19319 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
+		240CF15519851D6200B19319 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		240CF15619851D6200B19319 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
+		240CF15719851D6200B19319 /* AppIcon40x40@2x-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x-1.png"; sourceTree = "<group>"; };
+		240CF15819851D6200B19319 /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		240CF15919851D6200B19319 /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		240CF15A19851D6200B19319 /* AppIcon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76x76.png; sourceTree = "<group>"; };
+		240CF15B19851D6200B19319 /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
+		240CF15C19851D6200B19319 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		240CF15D19851D6200B19319 /* Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Circle.png; sourceTree = "<group>"; };
+		240CF15E19851D6200B19319 /* launch-image-iphone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-image-iphone4.png"; sourceTree = "<group>"; };
+		240CF15F19851D6200B19319 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		240CF16019851D6200B19319 /* paddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle.png; sourceTree = "<group>"; };
+		240CF16119851D6200B19319 /* pause_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_button.png; sourceTree = "<group>"; };
+		240CF16219851D6200B19319 /* scroll_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scroll_arrow.png; sourceTree = "<group>"; };
+		240CF17219851DC300B19319 /* impact.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = impact.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +105,8 @@
 		240CF11919851C6F00B19319 = {
 			isa = PBXGroup;
 			children = (
-				240CF12419851C6F00B19319 /* PongOverride */,
-				240CF13B19851C6F00B19319 /* PongOverrideTests */,
+				240CF12419851C6F00B19319 /* CircleSquash */,
+				240CF13B19851C6F00B19319 /* CircleSquashTests */,
 				240CF12319851C6F00B19319 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,40 +114,64 @@
 		240CF12319851C6F00B19319 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				240CF12219851C6F00B19319 /* PongOverride.app */,
-				240CF13819851C6F00B19319 /* PongOverrideTests.xctest */,
+				240CF12219851C6F00B19319 /* CircleSquash.app */,
+				240CF13819851C6F00B19319 /* CircleSquashTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		240CF12419851C6F00B19319 /* PongOverride */ = {
+		240CF12419851C6F00B19319 /* CircleSquash */ = {
 			isa = PBXGroup;
 			children = (
+				240CF14819851CC700B19319 /* SSDPongBall.swift */,
 				240CF12719851C6F00B19319 /* AppDelegate.swift */,
+				240CF14A19851CE000B19319 /* SSDMath.swift */,
+				240CF14C19851CFF00B19319 /* SSDPongMenus.swift */,
 				240CF12919851C6F00B19319 /* GameScene.sks */,
 				240CF12B19851C6F00B19319 /* GameScene.swift */,
 				240CF12D19851C6F00B19319 /* GameViewController.swift */,
 				240CF12F19851C6F00B19319 /* Main.storyboard */,
 				240CF13219851C6F00B19319 /* Images.xcassets */,
 				240CF12519851C6F00B19319 /* Supporting Files */,
+				240CF14E19851D2100B19319 /* SSDMultilineLabelNode.swift */,
+				240CF15019851D3400B19319 /* SSDGameSimulation.swift */,
+				240CF15219851D4800B19319 /* SSDGlobals.swift */,
 			);
+			name = CircleSquash;
 			path = PongOverride;
 			sourceTree = "<group>";
 		};
 		240CF12519851C6F00B19319 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				240CF17419851DD100B19319 /* SoundFX */,
+				240CF15419851D6200B19319 /* AppIcon29x29.png */,
+				240CF15519851D6200B19319 /* AppIcon29x29@2x.png */,
+				240CF15619851D6200B19319 /* AppIcon40x40.png */,
+				240CF15719851D6200B19319 /* AppIcon40x40@2x-1.png */,
+				240CF15819851D6200B19319 /* AppIcon40x40@2x.png */,
+				240CF15919851D6200B19319 /* AppIcon60x60@2x.png */,
+				240CF15A19851D6200B19319 /* AppIcon76x76.png */,
+				240CF15B19851D6200B19319 /* AppIcon76x76@2x.png */,
+				240CF15C19851D6200B19319 /* ball.png */,
+				240CF15D19851D6200B19319 /* Circle.png */,
+				240CF15E19851D6200B19319 /* launch-image-iphone4.png */,
+				240CF15F19851D6200B19319 /* logo.png */,
+				240CF16019851D6200B19319 /* paddle.png */,
+				240CF16119851D6200B19319 /* pause_button.png */,
+				240CF16219851D6200B19319 /* scroll_arrow.png */,
 				240CF12619851C6F00B19319 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		240CF13B19851C6F00B19319 /* PongOverrideTests */ = {
+		240CF13B19851C6F00B19319 /* CircleSquashTests */ = {
 			isa = PBXGroup;
 			children = (
 				240CF13E19851C6F00B19319 /* PongOverrideTests.swift */,
 				240CF13C19851C6F00B19319 /* Supporting Files */,
 			);
+			name = CircleSquashTests;
 			path = PongOverrideTests;
 			sourceTree = "<group>";
 		};
@@ -115,12 +183,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		240CF17419851DD100B19319 /* SoundFX */ = {
+			isa = PBXGroup;
+			children = (
+				240CF17219851DC300B19319 /* impact.wav */,
+			);
+			name = SoundFX;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		240CF12119851C6F00B19319 /* PongOverride */ = {
+		240CF12119851C6F00B19319 /* CircleSquash */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 240CF14219851C6F00B19319 /* Build configuration list for PBXNativeTarget "PongOverride" */;
+			buildConfigurationList = 240CF14219851C6F00B19319 /* Build configuration list for PBXNativeTarget "CircleSquash" */;
 			buildPhases = (
 				240CF11E19851C6F00B19319 /* Sources */,
 				240CF11F19851C6F00B19319 /* Frameworks */,
@@ -130,14 +206,14 @@
 			);
 			dependencies = (
 			);
-			name = PongOverride;
+			name = CircleSquash;
 			productName = PongOverride;
-			productReference = 240CF12219851C6F00B19319 /* PongOverride.app */;
+			productReference = 240CF12219851C6F00B19319 /* CircleSquash.app */;
 			productType = "com.apple.product-type.application";
 		};
-		240CF13719851C6F00B19319 /* PongOverrideTests */ = {
+		240CF13719851C6F00B19319 /* CircleSquashTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 240CF14519851C6F00B19319 /* Build configuration list for PBXNativeTarget "PongOverrideTests" */;
+			buildConfigurationList = 240CF14519851C6F00B19319 /* Build configuration list for PBXNativeTarget "CircleSquashTests" */;
 			buildPhases = (
 				240CF13419851C6F00B19319 /* Sources */,
 				240CF13519851C6F00B19319 /* Frameworks */,
@@ -148,9 +224,9 @@
 			dependencies = (
 				240CF13A19851C6F00B19319 /* PBXTargetDependency */,
 			);
-			name = PongOverrideTests;
+			name = CircleSquashTests;
 			productName = PongOverrideTests;
-			productReference = 240CF13819851C6F00B19319 /* PongOverrideTests.xctest */;
+			productReference = 240CF13819851C6F00B19319 /* CircleSquashTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -171,7 +247,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 240CF11D19851C6F00B19319 /* Build configuration list for PBXProject "PongOverride" */;
+			buildConfigurationList = 240CF11D19851C6F00B19319 /* Build configuration list for PBXProject "CircleSquash" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -184,8 +260,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				240CF12119851C6F00B19319 /* PongOverride */,
-				240CF13719851C6F00B19319 /* PongOverrideTests */,
+				240CF12119851C6F00B19319 /* CircleSquash */,
+				240CF13719851C6F00B19319 /* CircleSquashTests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,9 +271,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				240CF16C19851D6200B19319 /* Circle.png in Resources */,
 				240CF13319851C6F00B19319 /* Images.xcassets in Resources */,
+				240CF16819851D6200B19319 /* AppIcon60x60@2x.png in Resources */,
+				240CF17319851DC300B19319 /* impact.wav in Resources */,
+				240CF16B19851D6200B19319 /* ball.png in Resources */,
+				240CF16619851D6200B19319 /* AppIcon40x40@2x-1.png in Resources */,
+				240CF16719851D6200B19319 /* AppIcon40x40@2x.png in Resources */,
+				240CF16519851D6200B19319 /* AppIcon40x40.png in Resources */,
+				240CF16F19851D6200B19319 /* paddle.png in Resources */,
+				240CF16419851D6200B19319 /* AppIcon29x29@2x.png in Resources */,
 				240CF12A19851C6F00B19319 /* GameScene.sks in Resources */,
+				240CF16A19851D6200B19319 /* AppIcon76x76@2x.png in Resources */,
+				240CF16D19851D6200B19319 /* launch-image-iphone4.png in Resources */,
+				240CF16E19851D6200B19319 /* logo.png in Resources */,
 				240CF13119851C6F00B19319 /* Main.storyboard in Resources */,
+				240CF16319851D6200B19319 /* AppIcon29x29.png in Resources */,
+				240CF17019851D6200B19319 /* pause_button.png in Resources */,
+				240CF17119851D6200B19319 /* scroll_arrow.png in Resources */,
+				240CF16919851D6200B19319 /* AppIcon76x76.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +308,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				240CF12C19851C6F00B19319 /* GameScene.swift in Sources */,
+				240CF14D19851CFF00B19319 /* SSDPongMenus.swift in Sources */,
+				240CF14919851CC700B19319 /* SSDPongBall.swift in Sources */,
+				240CF15119851D3400B19319 /* SSDGameSimulation.swift in Sources */,
 				240CF12E19851C6F00B19319 /* GameViewController.swift in Sources */,
+				240CF15319851D4800B19319 /* SSDGlobals.swift in Sources */,
+				240CF14F19851D2100B19319 /* SSDMultilineLabelNode.swift in Sources */,
+				240CF14B19851CE000B19319 /* SSDMath.swift in Sources */,
 				240CF12819851C6F00B19319 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,7 +332,7 @@
 /* Begin PBXTargetDependency section */
 		240CF13A19851C6F00B19319 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 240CF12119851C6F00B19319 /* PongOverride */;
+			target = 240CF12119851C6F00B19319 /* CircleSquash */;
 			targetProxy = 240CF13919851C6F00B19319 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -336,8 +434,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = PongOverride/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CircleSquash;
+				SDKROOT = iphoneos7.1;
 			};
 			name = Debug;
 		};
@@ -347,8 +447,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = PongOverride/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CircleSquash;
+				SDKROOT = iphoneos7.1;
 			};
 			name = Release;
 		};
@@ -366,7 +468,7 @@
 				);
 				INFOPLIST_FILE = PongOverrideTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CircleSquashTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -381,7 +483,7 @@
 				);
 				INFOPLIST_FILE = PongOverrideTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CircleSquashTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -389,7 +491,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		240CF11D19851C6F00B19319 /* Build configuration list for PBXProject "PongOverride" */ = {
+		240CF11D19851C6F00B19319 /* Build configuration list for PBXProject "CircleSquash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				240CF14019851C6F00B19319 /* Debug */,
@@ -398,7 +500,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		240CF14219851C6F00B19319 /* Build configuration list for PBXNativeTarget "PongOverride" */ = {
+		240CF14219851C6F00B19319 /* Build configuration list for PBXNativeTarget "CircleSquash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				240CF14319851C6F00B19319 /* Debug */,
@@ -406,7 +508,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		240CF14519851C6F00B19319 /* Build configuration list for PBXNativeTarget "PongOverrideTests" */ = {
+		240CF14519851C6F00B19319 /* Build configuration list for PBXNativeTarget "CircleSquashTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				240CF14619851C6F00B19319 /* Debug */,
