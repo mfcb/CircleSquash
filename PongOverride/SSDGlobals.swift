@@ -49,3 +49,12 @@ func getImageInMainBundle(imageName:String, type:String) -> UIImage? {
 
 /* Graphics */
 var GLOBAL_ANTI_ALIASING = true
+
+//Toggle Mask Function
+func toggleMask(mask:UInt32, option:UInt32) -> UInt32 {
+    if (mask&option) == 0 {
+        return mask | option
+    } else {
+        return mask ^ option
+    }
+}

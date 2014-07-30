@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 /* PAUSE MENU */
-
+//MARK: PAUSE MENU CLASS
 class SSDPauseMenu: SKNode {
     let continueButton:SSDPongButton
     let menuButton:SSDPongButton
@@ -84,7 +84,7 @@ class SSDPauseMenu: SKNode {
 }
 
 /* MAIN MENU */
-//MARK: MAIN MENU
+//MARK: MAIN MENU CLASS
 enum MainMenuType {
     case Main
     case Highscore
@@ -195,8 +195,6 @@ class SSDMainMenu: SKNode {
         //Set the sub menu's sizes to the same value
         optionSubMenu.size = size
         resetGameSubMenu.size = size
-        
-        println("Main menu scale: \(self.xScale)")
     }
     }
     
@@ -235,17 +233,12 @@ class SSDMainMenu: SKNode {
     }
     }
     
-    func updateAllOptions() {
-        self.optionSubMenu.displayOptionControl()
-        self.optionSubMenu.displayOptionSound()
-        self.optionSubMenu.displayOptionVibration()
-    }
     
     
 } // Class Main Menu
 
 /* OPTION MENU */
-//MARK: OPTION MENU
+//MARK: OPTION MENU CLASS
 class SSDOptionMenu:SKNode {
     let headerLabel:SKLabelNode
     
@@ -299,7 +292,7 @@ class SSDOptionMenu:SKNode {
         controlsOption.optionNode.onClick = { () in
             let toggle = toggleMask(SSDGameSimulation.sharedSimulation().gameOptions, GLOBAL_OPTION_CONTROLS)
             SSDGameSimulation.sharedSimulation().gameOptions = toggle
-            self.displayOptionControl()
+            self.updateOptionControl()
         }
         
         soundFXOption.topDivider.hidden = true
@@ -307,7 +300,7 @@ class SSDOptionMenu:SKNode {
         soundFXOption.optionNode.onClick = { () in
             let toggle = toggleMask(SSDGameSimulation.sharedSimulation().gameOptions, GLOBAL_OPTION_SOUNDFX)
             SSDGameSimulation.sharedSimulation().gameOptions = toggle
-            self.displayOptionSound()
+            self.updateOptionSound()
             
         }
         
@@ -315,7 +308,7 @@ class SSDOptionMenu:SKNode {
             let toggle = toggleMask(SSDGameSimulation.sharedSimulation().gameOptions, GLOBAL_OPTION_VIBRATION)
             SSDGameSimulation.sharedSimulation().gameOptions = toggle
             println("Toggle: \(SSDGameSimulation.sharedSimulation().gameOptions & GLOBAL_OPTION_VIBRATION)")
-            self.displayOptionVibration()
+            self.updateOptionVibration()
             
         }
         
@@ -343,6 +336,7 @@ class SSDOptionMenu:SKNode {
         self.addChild(backButton)
         
         self.addChild(gameResetButton)
+        
         
     }
     
@@ -379,39 +373,49 @@ class SSDOptionMenu:SKNode {
     }
     }
     
-    func displayOptionControl() {
+    func updateOptionControl() {
         let options = SSDGameSimulation.sharedSimulation().gameOptions
+        println("OPTION CONTROLS: \(options & GLOBAL_OPTION_CONTROLS)")
+        let controlNode = self.controlsOption.optionNode as SSDOptionSwitchNode
         if options & GLOBAL_OPTION_CONTROLS == 0  {
             SSDGameSimulation.sharedSimulation().gameScene!.deactivateMotionDataIntake()
+            controlNode.isON = false
         } else {
             SSDGameSimulation.sharedSimulation().gameScene!.activateMotionDataIntake()
+            controlNode.isON = true
         }
     }
     
-    func displayOptionSound() {
+    func updateOptionSound() {
         let options = SSDGameSimulation.sharedSimulation().gameOptions
-        
+        let soundFXNode = self.soundFXOption.optionNode as SSDOptionSwitchNode
+        if options & GLOBAL_OPTION_SOUNDFX == 0  {
+            soundFXNode.isON = false
+        } else {
+            soundFXNode.isON = true
+        }
     }
     
-    func displayOptionVibration() {
+    func updateOptionVibration() {
         let options = SSDGameSimulation.sharedSimulation().gameOptions
+        let vibrateOptionNode = self.vibrateOption.optionNode as SSDOptionSwitchNode
+        if options & GLOBAL_OPTION_VIBRATION == 0  {
+            vibrateOptionNode.isON = false
+        } else {
+            vibrateOptionNode.isON = true
+        }
+    }
+    
+    func updateAllOptions() {
+        updateOptionControl()
     }
     
     
     
 } // Class Option Menu
 
-func toggleMask(mask:UInt32, option:UInt32) -> UInt32 {
-    if (mask&option) == 0 {
-        return mask | option
-    } else {
-        return mask ^ option
-    }
-}
-
-
 /* POST GAME MENU */
-
+//MARK: POST GAME MENU CLASS
 class SSDPostGameMenu:SKNode {
     
     let scoreHeading:SKLabelNode
@@ -535,7 +539,7 @@ class SSDPostGameMenu:SKNode {
     
     
 }
-
+//MARK: PONG GAME RESET MENU
 class SSDPongGameResetMenu:SKNode {
     let headerLabel:SKLabelNode
     
@@ -567,7 +571,10 @@ class SSDPongGameResetMenu:SKNode {
         gameResetButton.backgroundColor = UIColor(red: 0.94, green: 0.37, blue: 0.42, alpha: 1)
         gameResetButton.backgroundColorHover = UIColor(red: 0.94, green: 0.1, blue: 0.1, alpha: 1)
         gameResetButton.label.fontName = "HelveticaNeue-Regular"
-        gameResetButton.action = { () in SSDGameSimulation.sharedSimulation().setMenu(.GameReset) }
+        gameResetButton.action = { () in
+            NSUserDefaults.standardUserDefaults().setInteger(0, forKey: "Highscore")
+            SSDGameSimulation.sharedSimulation().setMenu(.Main)
+        }
         
         self.warningText = SSDMulitlineLabelNode()
         warningText.fontName = "HelveticaNeue-Light"
@@ -614,6 +621,7 @@ class SSDPongGameResetMenu:SKNode {
     }
 }
 
+//MARK: OPTION MENU DIVIDED ITEM
 class SSDPongOptionMenuDividedItem:SKNode {
     let topDivider:SKShapeNode
     let bottomDivider:SKShapeNode
@@ -731,15 +739,11 @@ class SSDPongOptionMenuDividedItem:SKNode {
     }
     }
     
-    func setValue(val:Any) {
-        optionNode.setValue(val)
-    }
     
 }
-
+//MARK: OPTION NODE CLASS
 class SSDOptionNode:SKNode {
     var onClick = { () in println("Define a function") }
-    
     override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!)  {
         onClick()
     }
@@ -749,10 +753,9 @@ class SSDOptionNode:SKNode {
         self.userInteractionEnabled = true
     }
     
-    func setValue(val:Any) {
-        
-    }
 }
+
+//MARK: OPTION SWITCH NODE CLASS
 
 class SSDOptionSwitchNode:SSDOptionNode {
     let stateONTitle:SKLabelNode
@@ -763,7 +766,7 @@ class SSDOptionSwitchNode:SSDOptionNode {
     var _width:CGFloat = 320
     var _height:CGFloat = 480
     
-    var _isON = false
+    private var _isON = false
     
     init(labelON:NSString, labelOFF:NSString) {
         //initialize contents
@@ -859,6 +862,7 @@ class SSDOptionSwitchNode:SSDOptionNode {
         return _isON
     }
     set(newState) {
+        _isON = newState
         if newState == true {
             self.stateONBackgroundShape.hidden = false
             self.stateONTitle.fontColor = GLOBAL_PONGCOLOR_BLUE
@@ -873,24 +877,14 @@ class SSDOptionSwitchNode:SSDOptionNode {
             self.stateOFFTitle.fontColor = GLOBAL_PONGCOLOR_BLUE
             
         }
-        _isON = newState
+        
     }
     }
     
     override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!) {
         super.touchesEnded(touches, withEvent: event)
-        if self.isON == true {
-            self.isON = false
-        } else {
-            self.isON = true
-        }
     }
     
-    override func setValue(val:Any) {
-        if val is Bool {
-            self.isON = val as Bool
-        }
-    }
 }
 
 //MARK: Pong Button
@@ -1021,16 +1015,21 @@ class SSDPongButton: SKNode {
     
     
 }
-
+//MARK: ActionLabel Class
 class SSDActionLabel:SKLabelNode {
+    let backupShape:SKShapeNode
     init() {
+        backupShape = SKShapeNode()
+        backupShape.lineWidth = 0
         super.init()
         self.userInteractionEnabled = true
+        applyBackupShapePath()
+        self.addChild(backupShape)
     }
     
-    init(fontNamed fontName: String!) {
-        super.init(fontNamed: fontName)
-        self.userInteractionEnabled = true
+    convenience init(fontNamed fontName: String!) {
+        self.init()
+        self.fontName = fontName
     }
     
     var action = { () in println("No action defined") }
@@ -1038,6 +1037,44 @@ class SSDActionLabel:SKLabelNode {
     override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!) {
         action()
     }
+    
+    override var text:String! {
+    get {
+        return super.text
+    }
+    set(newText) {
+        super.text = newText
+        applyBackupShapePath()
+    }
+    }
+    
+    override var fontName:String! {
+    get {
+        return super.fontName
+    }
+    set(newFont) {
+        super.fontName = newFont
+        applyBackupShapePath()
+    }
+    }
+    
+    override var fontSize:CGFloat {
+    get {
+        return super.fontSize
+    }
+    set(newSize) {
+        super.fontSize = newSize
+        applyBackupShapePath()
+    }
+    
+    }
+    
+    private func applyBackupShapePath() {
+        backupShape.path = nil
+        let bounds = CGRectMake(0, 0, self.frame.width, self.frame.height)
+        backupShape.path = CGPathCreateWithRect(bounds, nil)
+    }
+    
     
 }
 

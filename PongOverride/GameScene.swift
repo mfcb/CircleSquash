@@ -12,15 +12,16 @@ import UIKit
 import CoreMotion
 import Foundation
 
-/*extension SKPhysicsContact {
+extension SKPhysicsContact {
 var contactNormal:CGVector {
 get {
 let angleA = atan2f(Float(bodyA.velocity.dx), Float(bodyA.velocity.dy))
 let angleB = atan2f(Float(bodyB.velocity.dx), Float(bodyB.velocity.dy))
 return CGVectorMake(1, 1)
 }
+}//var contactNormal
+    
 }
-}*/
 
 class SSDGameScene: SKScene, SKPhysicsContactDelegate {
     
@@ -57,6 +58,7 @@ class SSDGameScene: SKScene, SKPhysicsContactDelegate {
     /* Menus */
     let pauseMenu = SSDPauseMenu(rect: CGRectMake(0, 0, 150, 50))
     let pauseButton = SKSpriteNode(imageNamed: "pause_button")
+    let pauseButtonBackupShape:SKShapeNode = SKShapeNode()
     
     let mainMenu:SSDMainMenu = SSDMainMenu(size: nil)
     
@@ -147,7 +149,10 @@ class SSDGameScene: SKScene, SKPhysicsContactDelegate {
         pauseButton.position = CGPoint(x: self.frame.width * 0.1, y: self.frame.height * 0.07)
         pauseButton.size.width = 25
         pauseButton.size.height = pauseButton.size.width
-        
+        pauseButtonBackupShape.lineWidth = 0
+        let pauseButtonBackupShapePathRect = CGRectMake(-pauseButton.size.width/1.7, -pauseButton.size.height/1.7, pauseButton.size.width*1.2, pauseButton.size.height*1.2)
+        pauseButtonBackupShape.path = CGPathCreateWithRect(pauseButtonBackupShapePathRect, nil)
+        pauseButton.addChild(pauseButtonBackupShape)
         /* Pause Menu */
         pauseMenu.size = self.frame.size
         
@@ -202,8 +207,8 @@ class SSDGameScene: SKScene, SKPhysicsContactDelegate {
         
         highScore = NSUserDefaults.standardUserDefaults().integerForKey("Highscore")
         
-        self.mainMenu.updateAllOptions()
         //We're ready
+        self.mainMenu.optionSubMenu.updateAllOptions()
         setupInitialGameState()
         
         
@@ -286,7 +291,7 @@ class SSDGameScene: SKScene, SKPhysicsContactDelegate {
                 SSDGameSimulation.sharedSimulation().setGameState(GameState.GameStatePaused)
             }
         case .GameStateInGame:
-            if(touchedNode == self.pauseButton) {
+            if touchedNode == self.pauseButton || touchedNode.inParentHierarchy(self.pauseButton) {
                 SSDGameSimulation.sharedSimulation().setGameState(GameState.GameStatePaused)
             }
         default:
