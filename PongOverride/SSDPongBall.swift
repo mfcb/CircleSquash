@@ -12,6 +12,11 @@ import SpriteKit
 class SSDPongBall: SKNode {
     let ballShape:SKSpriteNode
     var ballColor:UIColor = UIColor(red: 0.94, green: 0.921, blue: 0.8, alpha: 1)
+    
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+    
     init(rect:CGRect, image:UIImage?) {
         let ballShapeRect = CGRectMake(0,0, rect.width, rect.height)
         ballShape = SKSpriteNode()

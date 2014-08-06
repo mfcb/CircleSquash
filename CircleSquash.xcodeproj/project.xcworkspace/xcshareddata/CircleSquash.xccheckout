@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AE2B1777-639C-4852-A246-76EF8248EE18</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CircleSquash</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BBF522F86B36BB61A5F77CF8E2EDA182B47AF7AC</key>
+		<string>https://github.com/mfcb/CircleSquash.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CircleSquash.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BBF522F86B36BB61A5F77CF8E2EDA182B47AF7AC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mfcb/CircleSquash.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BBF522F86B36BB61A5F77CF8E2EDA182B47AF7AC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BBF522F86B36BB61A5F77CF8E2EDA182B47AF7AC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CircleSquash</string>
+		</dict>
+	</array>
+</dict>
+</plist>

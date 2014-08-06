@@ -12,11 +12,30 @@ import UIKit
 import CoreMotion
 import Foundation
 
+//iOS 7 doesn't have it, iOS 8 does: the Contact normal
+//to avoid varying user experiences and harder maintenance, we're not overriding the contactNormal,
+//but instead implementing our own
 extension SKPhysicsContact {
-var contactNormal:CGVector {
+var ssdContactNormal:CGVector {
 get {
-let angleA = atan2f(Float(bodyA.velocity.dx), Float(bodyA.velocity.dy))
-let angleB = atan2f(Float(bodyB.velocity.dx), Float(bodyB.velocity.dy))
+    func calculateAbsoluteRotation(node:SKNode) ->CGFloat {
+        var accumulatedRotation:CGFloat = 0.0
+        var tempNode:SKNode = node
+        while true {
+            accumulatedRotation += tempNode.zRotation
+            if tempNode.parent == nil {
+                break
+            } else {
+                tempNode = tempNode.parent
+            }
+        }
+        return accumulatedRotation
+    }
+    let angleInDeg = MBMath_radiansToDegrees(Float(self.bodyA.node.zRotation))
+    let b = 1.0 / cosf(angleInDeg)
+    println("Vector dy: \(b)")
+    println("Impulse \(self.collisionImpulse)")
+    
 return CGVectorMake(1, 1)
 }
 }//var contactNormal
@@ -361,8 +380,10 @@ class SSDGameScene: SKScene, SKPhysicsContactDelegate {
             return
         }
         if secondBody!.categoryBitMask & ballCategory != 0 {
+            
             let impulse = CGVectorMake(0, 0)//CGVectorMake(contact.contactNormal.dx * paddleImpulse, contact.contactNormal.dy * paddleImpulse)
-            secondBody!.applyImpulse(impulse)
+            contact.ssdContactNormal
+            //secondBody!.applyImpulse(impulse)
             ballPrePauseImpulseVector = impulse
             //add one to score
             scoreLabel.text = String(++score)

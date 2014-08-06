@@ -13,7 +13,11 @@ class SSDMulitlineLabelNode:SKLabelNode {
     var lines = [SKLabelNode]()
     var _text:String = ""
     
-    init() {
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+    
+    override init() {
         super.init()
     }
     

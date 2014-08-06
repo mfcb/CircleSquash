@@ -10,13 +10,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PongOverride/SSDPongMenus.swift"
-            timestampString = "428356738.072948"
+            timestampString = "429007925.157814"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1042"
-            endingLineNumber = "1042"
+            startingLineNumber = "1084"
+            endingLineNumber = "1084"
             landmarkName = "SSDActionLabel"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PongOverride/GameScene.swift"
+            timestampString = "429014161.942542"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
+            landmarkName = "didBeginContact(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CircleSquash.SSDGameScene.didBeginContact (CircleSquash.SSDGameScene)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.SKPhysicsContact&gt;) -&gt; ()"
+                  moduleName = "CircleSquash"
+                  urlString = "file:///Volumes/Code/CircleSquash/PongOverride/GameScene.swift"
+                  timestampString = "428925610.930514"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "378"
+                  endingLineNumber = "378"
+                  offsetFromSymbolStart = "6584">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CircleSquash.SSDGameScene.didBeginContact (CircleSquash.SSDGameScene)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.SKPhysicsContact&gt;) -&gt; ()"
+                  moduleName = "CircleSquash"
+                  urlString = "file:///Volumes/Code/CircleSquash/PongOverride/GameScene.swift"
+                  timestampString = "428925610.930685"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "378"
+                  endingLineNumber = "378"
+                  offsetFromSymbolStart = "6632">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

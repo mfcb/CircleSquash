@@ -17,6 +17,10 @@ class SSDPauseMenu: SKNode {
     let label:SKLabelNode
     var _size:CGSize
     
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+    
     init(rect:CGRect?) {
         
         continueButton = SSDPongButton(width: nil, andText: "Continue")
@@ -112,6 +116,10 @@ class SSDMainMenu: SKNode {
     let resetGameSubMenu:SSDPongGameResetMenu
     
     var _activeMenuType:MainMenuType = MainMenuType.Main
+    
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
     
     init(size:CGSize?) {
         let logoImage = getImageInMainBundle("logo", "png")
@@ -259,7 +267,11 @@ class SSDOptionMenu:SKNode {
     
     var marginLeft:CGFloat = 10.0
     
-    init() {
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+    
+    override init() {
         self.headerLabel = SKLabelNode(fontNamed: "HelveticaNeue-Bold")
         
         //self.controlsLabel = SKLabelNode(fontNamed: "HelveticaNeue-Light")
@@ -430,6 +442,10 @@ class SSDPostGameMenu:SKNode {
     var _highScore = NSUserDefaults.standardUserDefaults().integerForKey("Highscore")
     
     
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+    
     init(size:CGSize?) {
         scoreHeading = SKLabelNode(fontNamed: "HelveticaNeue-Bold")
         scoreSum = SKLabelNode(fontNamed: "HelveticaNeue-Light")
@@ -530,7 +546,7 @@ class SSDPostGameMenu:SKNode {
     }
     
     func doFadeIn(timer:NSTimer) {
-        let userInfo:NSDictionary = timer.userInfo() as NSDictionary
+        let userInfo:NSDictionary = timer.userInfo as NSDictionary
         let duration = NSTimeInterval(userInfo.valueForKey("duration") as NSNumber)
         
         self.tryAgainButton.simpleFadeIn(timeInterval: duration)
@@ -550,7 +566,12 @@ class SSDPongGameResetMenu:SKNode {
     let warningText:SSDMulitlineLabelNode
     
     var _size:CGSize = CGSizeZero
-    init()  {
+    
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+    
+    override init()  {
         self.headerLabel = SKLabelNode(fontNamed: "HelveticaNeue-Bold") // THE LABEL
         headerLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Center
         headerLabel.fontSize = 20
@@ -635,6 +656,10 @@ class SSDPongOptionMenuDividedItem:SKNode {
     let screenWidth = UIScreen.mainScreen().bounds.width
     let screenHeight = UIScreen.mainScreen().bounds.height
     
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+    
     init(option node:SSDOptionNode, optionTitle:NSString, optionDescription:NSString?) {
         //Dividing Lines
         let pathRef = CGPathCreateWithRect(CGRectMake(0, 0, _width, 1), nil)
@@ -686,7 +711,7 @@ class SSDPongOptionMenuDividedItem:SKNode {
             self.addChild(i)
         }
         self.width = 320
-        if !optionDescription {
+        if optionDescription == nil {
             self.height = screenHeight / 9.4
         } else {
             self.height = screenHeight / 9.4 + itemDescription[0].frame.height * CGFloat(itemDescription.count)
@@ -748,7 +773,11 @@ class SSDOptionNode:SKNode {
         onClick()
     }
     
-    init() {
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+    
+    override init() {
         super.init()
         self.userInteractionEnabled = true
     }
@@ -767,6 +796,10 @@ class SSDOptionSwitchNode:SSDOptionNode {
     var _height:CGFloat = 480
     
     private var _isON = false
+    
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
     
     init(labelON:NSString, labelOFF:NSString) {
         //initialize contents
@@ -902,6 +935,10 @@ class SSDPongButton: SKNode {
     var _textColor:UIColor = GLOBAL_PONGCOLOR_BLUE
     var textColorHover:UIColor = GLOBAL_PONGCOLOR_BLUE
     
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+    
     init(width:CGFloat?, andText text:String) {
         
         label = SKLabelNode(fontNamed: GLOBAL_FONT_LIGHT)
@@ -1018,7 +1055,12 @@ class SSDPongButton: SKNode {
 //MARK: ActionLabel Class
 class SSDActionLabel:SKLabelNode {
     let backupShape:SKShapeNode
-    init() {
+    
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+    
+    override init() {
         backupShape = SKShapeNode()
         backupShape.lineWidth = 0
         super.init()
@@ -1027,7 +1069,7 @@ class SSDActionLabel:SKLabelNode {
         self.addChild(backupShape)
     }
     
-    convenience init(fontNamed fontName: String!) {
+    convenience override init(fontNamed fontName: String!) {
         self.init()
         self.fontName = fontName
     }

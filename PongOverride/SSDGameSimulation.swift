@@ -41,7 +41,7 @@ class SSDGameSimulation {
     
     //This class automatically creates a singleton for easy use
     class func sharedSimulation() ->SSDGameSimulation {
-        if !_sharedGameSimulation {
+        if _sharedGameSimulation == nil {
             _sharedGameSimulation = SSDGameSimulation()
         }
         
